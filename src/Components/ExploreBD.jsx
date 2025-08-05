@@ -19,7 +19,7 @@ import rangamati from "../assets/rangamati.webp";
 
 const ExploreBD = () => {
   return (
-    <div className="bg-gray-100 mt-20 py-10 xl:px-24">
+    <div className="bg-gray-100 mt-10 py-10 xl:px-24">
       <Heading
         title="Explore Bangladesh"
         des="Experience Bangladesh’s vibrant culture and stunning landscapes. Explore Cox’s Bazar, Sylhet, Bandarban, Sajek Valley, and Rangamati.

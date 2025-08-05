@@ -1,7 +1,7 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import "../Components/style.css"; // Your custom styles (optional)
+import "../Components/style.css"; // Your custom 3D carousel styles
 
 import Heading from "../Shared/Heading";
 
@@ -15,6 +15,7 @@ import thailand from "../assets/thailand.webp";
 import bandarban from "../assets/bandarban.webp";
 import bangkok from "../assets/bangkok.webp";
 
+// 3D Carousel logic
 const carousel = (slider) => {
   const z = 300;
   function rotate() {
@@ -23,8 +24,8 @@ const carousel = (slider) => {
   }
   slider.on("created", () => {
     const deg = 360 / slider.slides.length;
-    slider.slides.forEach((element, idx) => {
-      element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
+    slider.slides.forEach((el, idx) => {
+      el.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
     });
     rotate();
   });
@@ -42,17 +43,6 @@ const Destination = () => {
     [carousel]
   );
 
-  const cities = [
-    { name: "London", hotels: "45 Hotels Available", img: london },
-    { name: "Paris", hotels: "40 Hotels Available", img: paris },
-    { name: "New York", hotels: "50 Hotels Available", img: newyork },
-    { name: "Goa", hotels: "40 Hotels Available", img: goa },
-    { name: "Kuala Lumpur", hotels: "35 Hotels Available", img: kuala },
-    { name: "Thailand", hotels: "60 Hotels Available", img: thailand },
-    { name: "Bandarban", hotels: "20 Hotels Available", img: bandarban },
-    { name: "Bangkok", hotels: "55 Hotels Available", img: bangkok },
-  ];
-
   return (
     <div className="py-10">
       <Heading
@@ -63,27 +53,110 @@ const Destination = () => {
       <div className="wrapper mt-10">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
-            {cities.map((city, idx) => (
-              <div
-                key={idx}
-                className="carousel__cell relative overflow-hidden rounded-xl shadow-lg"
-              >
-                <img
-                  src={city.img}
-                  alt={city.name}
-                  className="object-cover h-[380px] w-full"
-                />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
-
-                {/* Text */}
-                <div className="absolute bottom-4 left-4 text-white z-10">
-                  <h2 className="text-lg font-semibold">{city.name}</h2>
-                  <p className="text-sm">{city.hotels}</p>
-                </div>
+            {/* Each slide manually written without map */}
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={london}
+                alt="London"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">London</h2>
+                <p className="text-xs sm:text-sm">45 Hotels Available</p>
               </div>
-            ))}
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={paris}
+                alt="Paris"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Paris</h2>
+                <p className="text-xs sm:text-sm">40 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={newyork}
+                alt="New York"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">New York</h2>
+                <p className="text-xs sm:text-sm">50 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={goa}
+                alt="Goa"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Goa</h2>
+                <p className="text-xs sm:text-sm">40 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={kuala}
+                alt="Kuala Lumpur"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Kuala Lumpur</h2>
+                <p className="text-xs sm:text-sm">35 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={thailand}
+                alt="Thailand"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Thailand</h2>
+                <p className="text-xs sm:text-sm">60 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={bandarban}
+                alt="Bandarban"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Bandarban</h2>
+                <p className="text-xs sm:text-sm">20 Hotels Available</p>
+              </div>
+            </div>
+
+            <div className="carousel__cell relative overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={bangkok}
+                alt="Bangkok"
+                className="object-cover w-full h-[280px] sm:h-[360px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+              <div className="absolute bottom-4 left-4 text-white z-10">
+                <h2 className="text-base sm:text-lg font-semibold">Bangkok</h2>
+                <p className="text-xs sm:text-sm">55 Hotels Available</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

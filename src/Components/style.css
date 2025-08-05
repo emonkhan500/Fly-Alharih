@@ -9,7 +9,7 @@ body {
   /* Number slides (optional, keep if needed for other parts) */
   [class^="number-slide"],
   [class*=" number-slide"] {
-    background: grey;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background: #f0f0f0;
+   
     transition: transform 0.3s ease;
   }
   

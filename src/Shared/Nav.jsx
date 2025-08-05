@@ -44,6 +44,16 @@ const Nav = () => {
           {/* visible menu for large devices */}
           <div className="hidden md:flex md:items-center md:justify-center md:space-x-5 lg:space-x-10">
             <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
+                  isActive ? "text-blue-500" : "text-black"
+                }`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
               to="/flight"
               className={({ isActive }) =>
                 `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
@@ -122,6 +132,16 @@ const Nav = () => {
 
             {/* nav links */}
             <div className="grid items-center justify-between grid-cols-4 gap-2 my-7">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
+                  isActive ? "text-blue-500" : "text-black"
+                }`
+              }
+            >
+              Home
+            </NavLink>
               <NavLink
                 to="/flight"
                 onClick={() => setIsOpen(!isOpen)}

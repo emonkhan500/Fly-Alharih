@@ -1,9 +1,10 @@
 import React from 'react';
+import UmrahCard from '../../Components/UmrahCard';
 
 const Umrah = () => {
     return (
         <div>
-            <h1>This is Umrahh</h1>
+            <UmrahCard></UmrahCard>
         </div>
     );
 };

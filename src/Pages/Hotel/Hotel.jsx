@@ -1,9 +1,10 @@
 import React from 'react';
+import HotelSlider from '../../Components/HotelSlider';
 
 const Hotel = () => {
     return (
         <div>
-            <h1>This is Hotel</h1>
+            <HotelSlider></HotelSlider>
         </div>
     );
 };

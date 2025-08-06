@@ -1,9 +1,12 @@
 import React from 'react';
+import Airlines from '../../Components/Airlines';
+import ChepFlights from '../../Components/ChepFlights';
 
 const Flight = () => {
     return (
         <div>
-            <h1>this is flight</h1>
+            <ChepFlights></ChepFlights>
+           <Airlines></Airlines>
         </div>
     );
 };

@@ -1,19 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 .font {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 
-    font-style: normal;
-     }
-  /* In your index.css or global styles */
+  font-style: normal;
+}
+/* In your index.css or global styles */
 .slick-center .group {
-    transform: scale(1.08);
-    z-index: 10;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  }
-  
+  transform: scale(1.08);
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}

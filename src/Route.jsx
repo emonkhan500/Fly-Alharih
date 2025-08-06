@@ -11,28 +11,28 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-   errorElement:<Error></Error>,
-   children:[
-    {
-        path:'/',
-        element:<Home></Home>
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
       },
-    {
-        path:'/flight',
-        element:<Flight></Flight>
+      {
+        path: "/flight",
+        element: <Flight></Flight>,
       },
-    {
-        path:'/holiday',
-        element:<Holiday></Holiday>
+      {
+        path: "/holiday",
+        element: <Holiday></Holiday>,
       },
-    {
-        path:'/hotel',
-        element:<Hotel></Hotel>
+      {
+        path: "/hotel",
+        element: <Hotel></Hotel>,
       },
-    {
-        path:'/umrah',
-        element:<Umrah></Umrah>
+      {
+        path: "/umrah",
+        element: <Umrah></Umrah>,
       },
-   ]
+    ],
   },
 ]);

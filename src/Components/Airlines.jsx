@@ -13,7 +13,7 @@ import Heading from '../Shared/Heading';
 
 const Airlines = () => {
     return (
-        <div className='bg-gray-100 mt-20 lg:px-24'>
+        <div className='bg-gray-100 mt-10 lg:px-24'>
             <div className='py-10'>
             <Heading title='Top Airlines' des="JekFly's user-friendly platform connects you to top airlines instantly. Enjoy a comfortable and hassle-free journey on any destination."></Heading>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-10 lg:px-44 mt-8'>

@@ -1,9 +1,10 @@
 import React from 'react';
+import HolidaySlider from '../../Components/HolidaySlider';
 
 const Holiday = () => {
     return (
         <div>
-<h1>This is Holiday</h1>
+<HolidaySlider></HolidaySlider>
         </div>
     );
 };

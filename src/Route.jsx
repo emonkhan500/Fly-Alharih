@@ -1,47 +1,56 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "./Layout/Main";
 import Error from "./Error/Error";
-import Flight from "./Pages/Flight/Flight";
 import Home from "./Pages/Home/Home";
-import Holiday from "./Pages/Holiday/Holiday";
-import Hotel from "./Pages/Hotel/Hotel";
-import Umrah from "./Pages/Umrah/Umrah";
-import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
+import { lazy, Suspense } from "react";
+import Loader from "./Components/Loader/Loader";
+
+const Flight = lazy(() => import("./Pages/Flight/Flight"));
+const Holiday = lazy(() => import("./Pages/Holiday/Holiday"));
+const Hotel = lazy(() => import("./Pages/Hotel/Hotel"));
+const Umrah = lazy(() => import("./Pages/Umrah/Umrah"));
+const Login = lazy(() => import("./Pages/Login/Login"));
+const Register = lazy(() => import("./Pages/Register/Register"));
+
+const suspenseWrapper = (Component) => (
+  <Suspense fallback={<Loader message="Loading page..." />}>
+    <Component />
+  </Suspense>
+);
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main></Main>,
-    errorElement: <Error></Error>,
+    element: <Main />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home />,
       },
       {
         path: "/flight",
-        element: <Flight></Flight>,
+        element: suspenseWrapper(Flight),
       },
       {
         path: "/holiday",
-        element: <Holiday></Holiday>,
+        element: suspenseWrapper(Holiday),
       },
       {
         path: "/hotel",
-        element: <Hotel></Hotel>,
+        element: suspenseWrapper(Hotel),
       },
       {
         path: "/umrah",
-        element: <Umrah></Umrah>,
+        element: suspenseWrapper(Umrah),
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: suspenseWrapper(Login),
       },
       {
         path: "/register",
-        element: <Register></Register>,
+        element: suspenseWrapper(Register),
       },
     ],
   },

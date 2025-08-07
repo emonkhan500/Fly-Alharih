@@ -7,7 +7,7 @@ import { ArrowRightLeft } from "lucide-react";
 const InnerTab = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const commonTabClass = `relative flex flex-col lg:flex-row items-center gap-1 lg:gap-2 px-3 py-1 font-semibold lg:font-bold/50 text-black/50 transition-all duration-300`;
+  const commonTabClass = `relative flex flex-col lg:flex-row items-center gap-1 lg:gap-2 px-3 py-1 font-semibold lg:font-bold text-black transition-all duration-300`;
 
   return (
     <div className="max-w-[1280px] flex justify-center mx-auto mt-5">

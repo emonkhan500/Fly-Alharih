@@ -37,7 +37,8 @@ const Login = () => {
                 id="username"
                 name="username"
                 autoComplete="off"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                c
+                className="w-full py-2 pl-10 pr-4 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-white dark:text-black"
                 placeholder="Enter your email"
                 required
               />
@@ -57,7 +58,7 @@ const Login = () => {
                 id="password"
                 name="password"
                 autoComplete="off"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className="w-full py-2 pl-10 pr-4 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-white dark:text-black"
                 placeholder="Enter your password"
                 required
               />

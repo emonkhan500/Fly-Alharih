@@ -20,8 +20,9 @@ const TabSystem = () => {
   );
 
   const commonTabClass = `relative flex flex-col lg:flex-row items-center gap-1 lg:gap-2 px-3 py-1 font-semibold lg:font-bold transition-all duration-300 text-base lg:text-lg
-    before:content-[''] before:absolute before:-bottom-1 lg:before:-bottom-3 before:left-0 before:h-[2px]
-    before:bg-black before:w-0 before:transition-all before:duration-300`;
+  text-black
+  before:content-[''] before:absolute before:-bottom-1 lg:before:-bottom-3 before:left-0 before:h-[2px]
+  before:bg-black before:w-0 before:transition-all before:duration-300`;
 
   // Update tab when URL changes
   useEffect(() => {
@@ -74,10 +75,10 @@ const TabSystem = () => {
             <TabPanel>
               <InnerTab />
             </TabPanel>
-            <TabPanel className="p-10 text-4xl text-center ">
+            <TabPanel className="p-10 text-4xl text-center text-black">
               Hotel Booking Is Under Construction
             </TabPanel>
-            <TabPanel className="p-10 text-4xl text-center">
+            <TabPanel className="p-10 text-4xl text-center text-black">
               Holiday Booking Is Under Construction
             </TabPanel>
           </TabPanels>

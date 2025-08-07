@@ -7,8 +7,8 @@ import logo from "../assets/logo.webp";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="container mx-auto">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 w-full bg-white shadow-md shadow-gray-300 blur-0">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex">
@@ -111,7 +111,7 @@ const Nav = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="inline-flex p-1 ml-auto text-black transition-all duration-200 border border-black  md:hidden focus:bg-gray-100 hover:bg-gray-100"
+                className="inline-flex p-1 ml-auto text-black transition-all duration-200 border border-black md:hidden focus:bg-gray-100 hover:bg-gray-100"
               >
                 <svg
                   className="w-6 h-6 "
@@ -132,16 +132,16 @@ const Nav = () => {
 
             {/* nav links */}
             <div className="grid items-center justify-between grid-cols-4 gap-2 my-7">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
-                  isActive ? "text-blue-500" : "text-black"
-                }`
-              }
-            >
-              Home
-            </NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
+                    isActive ? "text-blue-500" : "text-black"
+                  }`
+                }
+              >
+                Home
+              </NavLink>
               <NavLink
                 to="/flight"
                 onClick={() => setIsOpen(!isOpen)}
@@ -222,7 +222,7 @@ const Nav = () => {
           <div className="hidden md:block">
             <Link
               to="/login"
-              className="flex gap-2 px-5 py-2 font-bold text-white bg-teal-500 rounded-lg cursor-pointer"
+              className="flex items-center justify-center gap-2 px-5 py-2 font-bold text-white bg-teal-500 rounded-lg cursor-pointer"
             >
               Login
               <CircleUserRound />

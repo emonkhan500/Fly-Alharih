@@ -6,6 +6,8 @@ import Home from "./Pages/Home/Home";
 import Holiday from "./Pages/Holiday/Holiday";
 import Hotel from "./Pages/Hotel/Hotel";
 import Umrah from "./Pages/Umrah/Umrah";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ export const router = createBrowserRouter([
       {
         path: "/umrah",
         element: <Umrah></Umrah>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

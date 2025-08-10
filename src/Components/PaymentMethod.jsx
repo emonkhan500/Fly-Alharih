@@ -16,14 +16,14 @@ const PaymentMethod = () => {
       {/* method  */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 px-4 md:px-10 lg:px-52 mt-8">
         <div>
-            <h1 className="text-lg font-medium mb-2">Bangladeshi Taka (BDT) </h1>
+            <h1 className="text-lg font-medium mb-2 dark:text-orange-300">Bangladeshi Taka (BDT) </h1>
             <div>
                 <img src={payment} alt="" />
 
             </div>
         </div>
         <div>
-            <h1 className="text-lg font-medium mb-2">United States Dollar (USD) </h1>
+            <h1 className="text-lg font-medium mb-2 dark:text-orange-300">United States Dollar (USD) </h1>
             <div>
                 <img src={payment} alt="" />
 

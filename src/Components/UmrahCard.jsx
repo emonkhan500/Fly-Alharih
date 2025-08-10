@@ -23,7 +23,7 @@ const UmrahCard = () => {
     return (
         <div className="xl:px-28 mx-auto px-4 py-10 font">
         <div className="breadcrumbs text-sm px-6 mb-4">
-  <ul>
+  <ul className='dark:text-black'>
     <li>
       <a>
         <svg
@@ -77,7 +77,7 @@ const UmrahCard = () => {
         <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {hotels.map((hotel, index) => (
             <div key={index} className="p-2">
-              <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+              <div className="bg-white dark:text-black shadow-md rounded-lg overflow-hidden flex flex-col h-full">
                 {/* Image */}
                 <div className="relative">
                   <img src={image} alt={hotel.name} className="h-48 w-full object-cover" />

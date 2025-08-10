@@ -19,7 +19,7 @@ const Service = () => {
             alt="Flight Booking"
             className="w-16 h-16 mb-2 mx-auto"
           />
-          <h3 className="text-lg font-semibold text-center">Flight Booking</h3>
+          <h3 className="text-lg font-semibold text-center dark:text-orange-300">Flight Booking</h3>
           <p className="text-sm text-gray-600  text-center">
             Find air ticket prices in Bangladesh. Book cheap airline tickets online with JekFly - your go-to flight booking website!
           </p>
@@ -32,7 +32,8 @@ const Service = () => {
             alt="Hotel Booking"
             className="w-16 h-16 mb-2 mx-auto"
           />
-          <h3 className="text-lg font-semibold text-center">Hotel Booking</h3>
+         
+          <h3 className="text-lg font-semibold text-center dark:text-orange-300">Hotel Booking</h3>
           <p className="text-sm text-gray-600  text-center">
             Book your ideal stay with ease at the top hotel booking platform. Discover the best deals for hotels and flights with JekFly!
           </p>
@@ -45,7 +46,7 @@ const Service = () => {
             alt="Holiday Packages"
             className="w-16 h-16 mb-2 mx-auto"
           />
-          <h3 className="text-lg font-semibold text-center">Holiday Packages</h3>
+          <h3 className="text-lg font-semibold text-center dark:text-orange-300">Holiday Packages</h3>
           <p className="text-sm text-gray-600 text-center">
             Discover the best deals on cheap holiday packages and vacation deals for 2024. Plan your affordable and amazing holiday with JekFly.
           </p>
@@ -58,7 +59,7 @@ const Service = () => {
             alt="Umrah Packages"
             className="w-16 h-16 mb-2 mx-auto"
           />
-          <h3 className="text-lg font-semibold text-center">Umrah Packages</h3>
+          <h3 className="text-lg font-semibold text-center dark:text-orange-300">Umrah Packages</h3>
           <p className="text-sm text-gray-600  text-center">
             Discover cheap Umrah packages in 2024! Book family-friendly and low-cost Umrah tours with JekFly for an unforgettable spiritual journey.
           </p>

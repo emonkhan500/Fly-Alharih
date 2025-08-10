@@ -90,9 +90,13 @@ const Register = () => {
               <label htmlFor="mobile" className="block mb-1 text-gray-600">
                 Mobile Number
               </label>
-              <div className="flex">
+              <div className="grid grid-cols-11">
                 {/* Country Code Dropdown */}
-                <select name="countryCode" className={inputStyle} required>
+                <select
+                  name="countryCode"
+                  className={`w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white text-black dark:bg-white dark:text-black col-span-3`}
+                  required
+                >
                   <option value="+1">+1 (US)</option>
                   <option value="+91">+91 (IN)</option>
                   <option value="+44">+44 (UK)</option>
@@ -104,7 +108,7 @@ const Register = () => {
                   type="tel"
                   id="mobile"
                   name="mobile"
-                  className={inputStyle}
+                  className={`${inputStyle} col-span-8`}
                   placeholder="1234567890"
                   required
                 />

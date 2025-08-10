@@ -44,7 +44,7 @@ const TabCard = ({
           setShowCalendar(true);
         }
       }}
-      className={`relative flex-grow border-2 rounded-lg cursor-pointer ${styling}`}
+      className={`relative flex-grow border-2 rounded-lg cursor-pointer bg-white text-black ${styling}`}
     >
       {fromTo && (
         <span className="absolute text-sm top-1 left-1">{fromTo}</span>
@@ -63,7 +63,7 @@ const TabCard = ({
       {cityCode && (
         <h4 className="py-1 text-base font-semibold text-center">{cityCode}</h4>
       )}
-      <div className="px-3 my-0 divider"></div>
+      <div className="mx-3 my-1 border-t border-gray-300"></div>
 
       {dateField && (
         <>

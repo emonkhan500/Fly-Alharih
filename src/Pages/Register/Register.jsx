@@ -2,6 +2,9 @@ import { Mail, Lock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const inputStyle =
+    "w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white text-black dark:bg-white dark:text-black";
+
   return (
     <div className="flex items-center justify-center min-h-screen px-4 py-10 bg-gray-100 md:px-0">
       <div className="flex flex-row-reverse items-center justify-center bg-sky-100 md:max-h-[680px] md:max-w-[880px] md:mx-auto overflow-hidden rounded-lg">
@@ -36,7 +39,7 @@ const Register = () => {
                   id="firstName"
                   name="firstName"
                   autoComplete="off"
-                  className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                  className={inputStyle}
                   placeholder="John"
                   required
                 />
@@ -55,7 +58,7 @@ const Register = () => {
                   id="lastName"
                   name="lastName"
                   autoComplete="off"
-                  className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                  className={inputStyle}
                   placeholder="Doe"
                   required
                 />
@@ -76,7 +79,7 @@ const Register = () => {
                 id="email"
                 name="email"
                 autoComplete="off"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className={inputStyle}
                 placeholder="you@example.com"
                 required
               />
@@ -87,11 +90,11 @@ const Register = () => {
               <label htmlFor="mobile" className="block mb-1 text-gray-600">
                 Mobile Number
               </label>
-              <div className="flex">
+              <div className="grid grid-cols-11">
                 {/* Country Code Dropdown */}
                 <select
                   name="countryCode"
-                  className="px-3 py-2 bg-white border border-gray-300 rounded-l-md focus:outline-none focus:border-blue-500"
+                  className={`w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white text-black dark:bg-white dark:text-black col-span-3`}
                   required
                 >
                   <option value="+1">+1 (US)</option>
@@ -105,7 +108,7 @@ const Register = () => {
                   type="tel"
                   id="mobile"
                   name="mobile"
-                  className="w-full py-2 pl-4 pr-4 border border-gray-300 rounded-r-md focus:outline-none focus:border-blue-500"
+                  className={`${inputStyle} col-span-8`}
                   placeholder="1234567890"
                   required
                 />
@@ -125,7 +128,7 @@ const Register = () => {
                 type="password"
                 id="password"
                 name="password"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className={inputStyle}
                 placeholder="Enter your password"
                 required
               />
@@ -147,7 +150,7 @@ const Register = () => {
                 type="password"
                 id="confirmPassword"
                 name="confirmPassword"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className={inputStyle}
                 placeholder="Confirm your password"
                 required
               />

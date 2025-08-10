@@ -37,7 +37,8 @@ const Login = () => {
                 id="username"
                 name="username"
                 autoComplete="off"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                c
+                className="w-full py-2 pl-10 pr-4 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-white dark:text-black"
                 placeholder="Enter your email"
                 required
               />
@@ -57,7 +58,7 @@ const Login = () => {
                 id="password"
                 name="password"
                 autoComplete="off"
-                className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className="w-full py-2 pl-10 pr-4 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-white dark:text-black"
                 placeholder="Enter your password"
                 required
               />
@@ -70,10 +71,10 @@ const Login = () => {
                   type="checkbox"
                   id="remember"
                   name="remember"
-                  className="accent-blue-500"
+                  className="bg-white border border-gray-300 rounded accent-blue-500 dark:bg-white dark:border-white"
                   required
                 />
-                <label htmlFor="remember" className="ml-2 text-gray-700">
+                <label htmlFor="remember" className="ml-2 text-gray-700 ">
                   Remember Me
                 </label>
               </div>
@@ -87,7 +88,7 @@ const Login = () => {
             {/* Login Button */}
             <button
               type="submit"
-              className="w-full py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+              className="w-full py-2 text-base font-medium text-white bg-teal-500 rounded-md"
             >
               Login
             </button>
@@ -103,12 +104,12 @@ const Login = () => {
 
           {/* Social Login */}
           <div className="flex flex-col items-center justify-between gap-4 mt-6 sm:flex-row">
-            <button className="flex items-center justify-center w-full gap-2 py-2 transition border rounded-md sm:flex-1 hover:bg-gray-200">
+            <button className="flex items-center justify-center w-full gap-2 py-2 text-gray-800 transition bg-white border rounded-md shadow-sm sm:flex-1 dark:bg-white dark:text-dark ">
               <FcGoogle size={22} />
               <span className="text-sm">Google</span>
             </button>
 
-            <button className="flex items-center justify-center w-full gap-2 py-2 text-blue-600 transition border rounded-md sm:flex-1 hover:bg-gray-200">
+            <button className="flex items-center justify-center w-full gap-2 py-2 text-white transition bg-blue-600 border rounded-md shadow-sm sm:flex-1 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
               <FaFacebookF size={20} />
               <span className="text-sm">Facebook</span>
             </button>

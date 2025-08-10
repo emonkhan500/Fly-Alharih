@@ -14,7 +14,7 @@ const TravelClassModal = ({ isOpen, onClose, onApply, current }) => {
       onClick={onClose}
     >
       <div
-        className="w-full max-w-sm p-5 bg-white rounded shadow"
+        className="w-full max-w-sm p-5 text-black bg-white rounded shadow dark:bg-white dark:text-black"
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="mb-4 text-lg font-semibold">Select Class & Travelers</h2>
@@ -24,7 +24,7 @@ const TravelClassModal = ({ isOpen, onClose, onApply, current }) => {
           <select
             value={travelClass}
             onChange={(e) => setTravelClass(e.target.value)}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 text-black bg-white border border-gray-300 rounded dark:bg-white dark:text-black"
           >
             <option value="Economy">Economy</option>
             <option value="Premium Economy">Premium Economy</option>
@@ -41,7 +41,7 @@ const TravelClassModal = ({ isOpen, onClose, onApply, current }) => {
               min={1}
               value={adults}
               onChange={(e) => setAdults(Number(e.target.value))}
-              className="w-full p-1 border rounded"
+              className="w-full p-2 text-black bg-white border border-gray-300 rounded dark:bg-white dark:text-black"
             />
           </div>
           <div>
@@ -51,7 +51,7 @@ const TravelClassModal = ({ isOpen, onClose, onApply, current }) => {
               min={0}
               value={children}
               onChange={(e) => setChildren(Number(e.target.value))}
-              className="w-full p-1 border rounded"
+              className="w-full p-2 text-black bg-white border border-gray-300 rounded dark:bg-white dark:text-black"
             />
           </div>
           <div>
@@ -61,7 +61,7 @@ const TravelClassModal = ({ isOpen, onClose, onApply, current }) => {
               min={0}
               value={infants}
               onChange={(e) => setInfants(Number(e.target.value))}
-              className="w-full p-1 border rounded"
+              className="w-full p-2 text-black bg-white border border-gray-300 rounded dark:bg-white dark:text-black"
             />
           </div>
         </div>

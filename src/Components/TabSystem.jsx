@@ -38,7 +38,7 @@ const TabSystem = () => {
   };
 
   return (
-    <div className="max-w-[1280px] flex justify-center px-7 py-5 mx-auto bg-white rounded-lg mb-10 shadow-lg shadow-gray-300">
+    <div className="max-w-[1280px] flex justify-center px-7 py-5 mx-auto bg-white dark:bg-white rounded-lg mb-10 shadow-lg shadow-gray-300  border-2">
       <div className="w-full">
         <TabGroup selectedIndex={selectedIndex} onChange={handleTabChange}>
           <TabList className="flex items-center justify-center gap-4 lg:justify-start">

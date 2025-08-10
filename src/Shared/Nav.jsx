@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { CircleUserRound, Hotel, Plane, TentTree, UserCog } from "lucide-react";
+import {
+  CircleUserRound,
+  Hotel,
+  House,
+  Plane,
+  TentTree,
+  UserCog,
+} from "lucide-react";
 import umrahImg from "../assets/umrah.webp";
 import logo from "../assets/logo.webp";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-md shadow-gray-300 blur-0">
+    <nav className="sticky top-0 z-50 w-full bg-white shadow-md shadow-gray-300 dark:shadow-gray-300">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
@@ -134,12 +141,14 @@ const Nav = () => {
             <div className="grid items-center justify-between grid-cols-4 gap-2 my-7">
               <NavLink
                 to="/"
+                onClick={() => setIsOpen(!isOpen)}
                 className={({ isActive }) =>
-                  `text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
-                    isActive ? "text-blue-500" : "text-black"
+                  `text-base font-semibold transition-all duration-200 hover:text-opacity-80 flex flex-col items-center shadow-gray-300 shadow-lg p-2 rounded-md ${
+                    isActive ? "text-blue-300" : "text-black"
                   }`
                 }
               >
+                <House />
                 Home
               </NavLink>
               <NavLink
@@ -199,11 +208,11 @@ const Nav = () => {
 
             <div className="h-[2px] bg-gray-300 mb-5" />
 
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               <Link
                 to="/login"
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex flex-col items-center p-2 text-base font-semibold transition-all duration-200 rounded-md shadow-lg hover:text-opacity-80 shadow-gray-300"
+                className="flex flex-col items-center p-2 text-base font-semibold transition-all duration-200 rounded-md shadow-lg hover:text-opacity-80 shadow-gray-300 text-slate-950"
               >
                 <CircleUserRound />
                 Login
@@ -211,7 +220,7 @@ const Nav = () => {
               <Link
                 to="/support"
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex flex-col items-center p-2 text-base font-semibold transition-all duration-200 rounded-md shadow-lg hover:text-opacity-80 shadow-gray-300"
+                className="flex flex-col items-center p-2 text-base font-semibold transition-all duration-200 rounded-md shadow-lg hover:text-opacity-80 shadow-gray-300 text-slate-950"
               >
                 <UserCog />
                 Support

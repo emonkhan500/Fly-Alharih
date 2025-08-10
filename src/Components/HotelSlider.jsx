@@ -32,7 +32,7 @@ const HotelSlider = () => {
   return (
     <div className="px-4 py-8 mx-auto shadow-xl xl:px-28 font">
       <div className="flex items-center justify-between px-4 mb-4">
-        <h2 className="text-3xl font-bold">Hotel Booking</h2>
+        <h2 className="text-3xl font-bold dark:text-black">Hotel Booking</h2>
         <button className="px-4 py-2 text-white transition bg-blue-600 rounded hover:bg-blue-700">
           View All
         </button>
@@ -40,7 +40,7 @@ const HotelSlider = () => {
       <Slider {...settings}>
         {hotels.map((hotel, index) => (
           <div key={index} className="p-2">
-            <div className="flex flex-col h-full bg-white rounded-lg shadow-md">
+            <div className="flex flex-col h-full bg-white dark:text-black rounded-lg shadow-md">
               <img
                 src={image}
                 alt="hotel"

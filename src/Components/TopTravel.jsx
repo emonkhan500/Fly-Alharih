@@ -26,8 +26,8 @@ import dubai from "../assets/dubai.webp";
 
 const TopTravel = () => {
     return (
-        <div className='lg:px-32 pt-10'>
-            <Heading
+        <div className='lg:px-32 pt-10 dark:bg-white'>
+            <Heading 
         title="Top Travel Destinations"
         des="Expand your horizons! Explore our curated selection of top destinations across Asia, Europe, America, Australia, and beyond with JekFly."
       ></Heading>

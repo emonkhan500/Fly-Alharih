@@ -36,7 +36,7 @@ const HolidaySlider = () => {
   return (
     <div className="px-4 py-10 mx-auto xl:px-28 font">
       <div className="flex items-center justify-between px-4 mb-6">
-        <h2 className="text-3xl font-bold">Holiday packages</h2>
+        <h2 className="text-3xl font-bold dark:text-black">Holiday packages</h2>
         <button className="px-4 py-2 text-white transition bg-blue-600 rounded hover:bg-blue-700">
           View All
         </button>
@@ -44,7 +44,7 @@ const HolidaySlider = () => {
       <Slider {...settings}>
         {hotels.map((hotel, index) => (
           <div key={index} className="p-2">
-            <div className="flex flex-col h-full overflow-hidden bg-white rounded-lg shadow-md">
+            <div className="flex flex-col h-full overflow-hidden dark:text-black bg-white rounded-lg shadow-md">
               {/* Image */}
               <div className="relative">
                 <img

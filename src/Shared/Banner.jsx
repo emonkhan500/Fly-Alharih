@@ -8,9 +8,9 @@ const Banner = () => {
         className=" w-full h-[500px] bg-cover bg-center text-white flex justify-center items-center"
         style={{ backgroundImage: `url(${airlineImg})` }}
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-center">
           <h3 className="text-4xl font-semibold ">Welcome to Jekfly</h3>
-          <p className="ml-auto text-base font-bold">
+          <p className=" text-base font-bold">
             Where Every Journey Begins
           </p>
           <p className="text-lg font-semibold">Find Flight, Hotel & Holiday</p>

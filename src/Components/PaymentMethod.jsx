@@ -4,6 +4,7 @@ import payment from "../assets/footer-payment-method.webp";
 const PaymentMethod = () => {
   return (
     <div className="font my-14">
+      
         {/* heading */}
       {/* <div className="mx-auto text-center md:w-3/6 lg:w-2/6 ">
         <h1 className="text-3xl font-semibold wi">Payment Methods</h1>
